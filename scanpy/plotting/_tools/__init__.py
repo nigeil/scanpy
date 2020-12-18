@@ -1179,11 +1179,6 @@ def embedding_density(
     if isinstance(color_map, str):
         color_map = cm.get_cmap(color_map)
 
-    if vcenter is None:
-        norm = colors.Normalize(vmin=vmin, vmax=vmax)
-    else:
-        norm = colors.TwoSlopeNorm(vcenter=vcenter, vmin=vmin, vmax=vmax)
-
     color_map.set_over('black')
     color_map.set_under('lightgray')
     # a name to store the density values is needed. To avoid
@@ -1238,6 +1233,7 @@ def embedding_density(
                 size=dot_sizes,
                 vmax=vmax,
                 vmin=vmin,
+                vcenter=vcenter,
                 save=False,
                 title=_title,
                 ax=ax,
