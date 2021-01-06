@@ -17,6 +17,7 @@ On master
 .. rubric:: Features
 
 - Enable download of source image for 10x visium datasets in :func:`~scanpy.datasets.visium_sge` :pr:`1506` :smaller:`H Spitzer`
+- Enable vcenter argument in plotting functions to control the center point of divergent color palettes :pr:`1551` :smaller:`G Eraslan`
 
 .. rubric:: Bugfixes
 
