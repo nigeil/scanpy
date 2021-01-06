@@ -560,10 +560,10 @@ class BasePlot(object):
         ax.set_xlim(0, len(x_labels))
 
         return _setup_colornorm(
-                self.vmin,
-                self.vmax,
-                self.vcenter,
-                self.kwds.get('norm'),
+            self.vmin,
+            self.vmax,
+            self.vcenter,
+            self.kwds.get('norm'),
         )
 
     def make_figure(self):
