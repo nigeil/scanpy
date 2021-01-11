@@ -27,6 +27,8 @@ parts of scanpy but aren't requirements: python-igraph_ [Csardi06]_ and leiden_ 
 .. _python-igraph: http://igraph.org/python/
 .. _leiden: https://leidenalg.readthedocs.io
 
+.. _dev-install-instructions:
+
 Development Version
 ~~~~~~~~~~~~~~~~~~~
 To work with the latest version `on GitHub`_: clone the repository and `cd` into
@@ -36,6 +38,11 @@ cloned version after you update with `git pull`) call::
     flit install -s  # from an activated venv or conda env
     # or
     flit install -s --python path/to/venv/bin/python
+
+If you intend to do development work, there are some extra dependencies you'll want.
+These can be install with `scanpy` via::
+
+    pip install -e ".[dev,doc,test]"
 
 .. _on GitHub: https://github.com/theislab/scanpy
 

@@ -53,7 +53,7 @@ requires = [
     'natsort',
     'joblib',
     'numba>=0.41.0',
-    'umap-learn>=0.3.10',
+    'umap-learn>=0.3.10,<0.5',
     'legacy-api-wrap',
     'packaging',
     'sinfo',
@@ -65,7 +65,7 @@ requires = [
 louvain = ['python-igraph', 'louvain>=0.6,!=0.6.2']
 leiden = ['python-igraph', 'leidenalg']
 bbknn = ['bbknn']
-scvi = ['scvi>=0.6.5']
+scvi = ['scvi==0.6.7']
 rapids = ['cudf>=0.9', 'cuml>=0.9', 'cugraph>=0.9']
 magic = ['magic-impute>=2.0']
 skmisc = ['scikit-misc>=0.1.3']
@@ -108,6 +108,10 @@ markers = [
     'internet: tests which rely on internet resources (enable with `--internet-tests`)',
 ]
 
+[tool.coverage.run]
+source = ['scanpy']
+omit = ['*/tests/*']
+
 [tool.black]
 line-length = 88
 target-version = ['py36']
@@ -119,7 +123,6 @@ exclude = '''
     |__init__
     |logging
     |_utils
-    |_settings
     |neighbors/__init__
     |api/(__init__|pp|pl|datasets)
     |external/(exporting|tl/_palantir)
